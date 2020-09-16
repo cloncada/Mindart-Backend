@@ -1,4 +1,4 @@
-package com.application.tourist.entity;
+package com.application.Mindart.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,32 +6,38 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "company", uniqueConstraints={
+@Table(name = "artists", uniqueConstraints={
         @UniqueConstraint(  columnNames ={"email"})
 })
-public class Company {
+
+public class Artist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer id;
     @Column
-    @NotBlank(message = "name mandatory")
+    @NotBlank(message = "password mandatory")
     private String name;
+
     @Column
-    @NotBlank(message = "nit mandatory")
-    private String nit;
+    @NotBlank(message = "password mandatory")
+    private String dob;
+
     @Column
-    @NotBlank(message = "email mandatory")
-    private String email;
+    @NotBlank(message = "password mandatory")
+    private String password;
+
     @Column
     private String number;
+    @Column
+    @NotBlank(message = "Email is mandatory")
+    private String email;
 
     public Integer getId() {
         return id;
@@ -49,20 +55,20 @@ public class Company {
         this.name = name;
     }
 
-    public String getNit() {
-        return nit;
+    public String getDob() {
+        return dob;
     }
 
-    public void setNit(String nit) {
-        this.nit = nit;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPassword() {
+        return password;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNumber() {
@@ -71,5 +77,13 @@ public class Company {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -1,45 +1,36 @@
-package com.application.tourist.entity;
+package com.application.Mindart.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.awt.*;
-import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "artists", uniqueConstraints={
+@Table(name = "company", uniqueConstraints={
         @UniqueConstraint(  columnNames ={"email"})
 })
-
-public class Artist {
+public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer id;
     @Column
-    @NotBlank(message = "password mandatory")
+    @NotBlank(message = "name mandatory")
     private String name;
-
     @Column
-    @NotBlank(message = "password mandatory")
-    private String dob;
-
+    @NotBlank(message = "nit mandatory")
+    private String nit;
     @Column
-    @NotBlank(message = "password mandatory")
-    private String password;
-
+    @NotBlank(message = "email mandatory")
+    private String email;
     @Column
     private String number;
-    @Column
-    @NotBlank(message = "Email is mandatory")
-    private String email;
 
     public Integer getId() {
         return id;
@@ -57,28 +48,12 @@ public class Artist {
         this.name = name;
     }
 
-    public String getDob() {
-        return dob;
+    public String getNit() {
+        return nit;
     }
 
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
+    public void setNit(String nit) {
+        this.nit = nit;
     }
 
     public String getEmail() {
@@ -87,5 +62,13 @@ public class Artist {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }

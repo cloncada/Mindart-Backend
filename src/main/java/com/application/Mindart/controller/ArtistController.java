@@ -1,7 +1,7 @@
-package com.application.tourist.controller;
+package com.application.Mindart.controller;
 
-import com.application.tourist.entity.Artist;
-import com.application.tourist.service.ArtistService;
+import com.application.Mindart.entity.Artist;
+import com.application.Mindart.service.ArtistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

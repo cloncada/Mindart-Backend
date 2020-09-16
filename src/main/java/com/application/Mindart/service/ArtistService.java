@@ -1,7 +1,7 @@
-package com.application.tourist.service;
+package com.application.Mindart.service;
 
-import com.application.tourist.entity.Artist;
-import com.application.tourist.repository.ArtistRepository;
+import com.application.Mindart.entity.Artist;
+import com.application.Mindart.repository.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

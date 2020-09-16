@@ -1,13 +1,13 @@
-package com.application.tourist;
+package com.application.Mindart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TouristApplication {
+public class MindartApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TouristApplication.class, args);
+		SpringApplication.run(MindartApplication.class, args);
 	}
 
 }

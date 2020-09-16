@@ -1,7 +1,7 @@
-package com.application.tourist.controller;
+package com.application.Mindart.controller;
 
-import com.application.tourist.entity.Company;
-import com.application.tourist.service.CompanyService;
+import com.application.Mindart.entity.Company;
+import com.application.Mindart.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

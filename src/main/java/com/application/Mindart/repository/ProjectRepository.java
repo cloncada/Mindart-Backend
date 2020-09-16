@@ -1,6 +1,6 @@
-package com.application.tourist.repository;
+package com.application.Mindart.repository;
 
-import com.application.tourist.entity.Project;
+import com.application.Mindart.entity.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

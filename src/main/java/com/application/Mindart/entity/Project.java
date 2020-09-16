@@ -1,4 +1,4 @@
-package com.application.tourist.entity;
+package com.application.Mindart.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
