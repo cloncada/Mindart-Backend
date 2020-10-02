@@ -15,26 +15,25 @@ public class ArtistService  {
     public Artist saveArtist(Artist artist) {
        return repository.save(artist);
     }
+
     public List<Artist> getArtists(){
-
         return repository.findAll();
-
     }
+
     public Artist getArtistById(String id){
-
         return repository.findById(id).orElse(null);
-
     }
+
     public String deleteArtist(String id){
         repository.deleteById(id);
         return "removed artist with id "+id;
-
-
     }
+
     public Artist updateArtist(Artist artist){
-
      return null;
+    }
 
-
+    public Artist searchEmailAndPassword(String email, String password){
+        return repository.findByEmailAndPassword(email,password);
     }
 }
