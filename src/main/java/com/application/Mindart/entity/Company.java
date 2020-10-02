@@ -20,17 +20,26 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer id;
+
     @Column
     @NotBlank(message = "name mandatory")
     private String name;
+
     @Column
     @NotBlank(message = "nit mandatory")
     private String nit;
+
     @Column
     @NotBlank(message = "email mandatory")
     private String email;
+
     @Column
+    @NotBlank(message = "number mandatory")
     private String number;
+
+    @Column
+    @NotBlank(message = "password mandatory")
+    private String password;
 
     public Integer getId() {
         return id;
@@ -70,5 +79,13 @@ public class Company {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
