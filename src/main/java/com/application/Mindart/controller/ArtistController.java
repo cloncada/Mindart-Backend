@@ -15,7 +15,6 @@ public class ArtistController {
     @PostMapping("/addArtist")
     public Artist addArtist(@RequestBody Artist artist){
 
-
         return service.saveArtist(artist);
     }
     @GetMapping("/Artist")
