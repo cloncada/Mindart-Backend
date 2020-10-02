@@ -37,7 +37,7 @@ public class ArtistController {
     @DeleteMapping("/delete/Artist/{id}")
     public String deleteArtist(@PathVariable  String id){
 
-
-        return service.deleteArtist(id);
+       return service.deleteArtist(id);
     }
+
 }

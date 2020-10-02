@@ -10,4 +10,5 @@ public class MindartApplication {
 		SpringApplication.run(MindartApplication.class, args);
 	}
 
+
 }

@@ -22,11 +22,11 @@ public class Artist {
     @Column
     private Integer id;
     @Column
-    @NotBlank(message = "password mandatory")
+    @NotBlank(message = "name mandatory")
     private String name;
 
     @Column
-    @NotBlank(message = "password mandatory")
+    @NotBlank(message = "dob mandatory")
     private String dob;
 
     @Column
