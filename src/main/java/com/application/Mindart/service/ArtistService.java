@@ -36,4 +36,8 @@ public class ArtistService  {
     public Artist searchEmailAndPassword(String email, String password){
         return repository.findByEmailAndPassword(email,password);
     }
+    public Artist findByEmail(String email){
+
+        return repository.findByEmail(email);
+    }
 }

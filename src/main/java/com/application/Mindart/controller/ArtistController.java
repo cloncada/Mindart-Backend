@@ -51,4 +51,11 @@ public class ArtistController {
         }
         return artistObject;
     }
+    @GetMapping("artist/{email}")
+    public Artist findByEmail (@PathVariable String email){
+        return service.findByEmail(email);
+
+    }
+
+
 }
