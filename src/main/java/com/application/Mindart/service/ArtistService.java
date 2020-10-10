@@ -3,12 +3,14 @@ package com.application.Mindart.service;
 import com.application.Mindart.entity.Artist;
 import com.application.Mindart.repository.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ArtistService  {
+    
     @Autowired
     private ArtistRepository repository;
 
