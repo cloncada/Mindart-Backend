@@ -1,10 +1,12 @@
-package com.application.Mindart.service;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Service;
-import com.application.Mindart.entity.Project;
-import com.application.Mindart.repository.ProjectRepository;
+package com.application.mindart.domain.service;
+
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.application.mindart.domain.entity.Project;
+import com.application.mindart.domain.repository.ProjectRepository;
 @Service
 public class ProjectService {
     @Autowired

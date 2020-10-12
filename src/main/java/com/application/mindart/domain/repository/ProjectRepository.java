@@ -1,9 +1,10 @@
-package com.application.Mindart.repository;
-
-import com.application.Mindart.entity.Project;
-import org.springframework.data.jpa.repository.JpaRepository;
+package com.application.mindart.domain.repository;
 
 import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.application.mindart.domain.entity.Project;
 
 public interface ProjectRepository extends JpaRepository<Project, String> {
 

@@ -1,12 +1,12 @@
-package com.application.Mindart.service;
+package com.application.mindart.domain.service;
 
-import com.application.Mindart.entity.Artist;
-import com.application.Mindart.entity.Company;
-import com.application.Mindart.repository.CompanyRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.application.mindart.domain.entity.Company;
+import com.application.mindart.domain.repository.CompanyRepository;
 
 @Service
 public class CompanyService {

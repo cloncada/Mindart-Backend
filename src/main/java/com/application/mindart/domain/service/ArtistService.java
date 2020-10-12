@@ -1,12 +1,13 @@
-package com.application.Mindart.service;
+package com.application.mindart.domain.service;
 
-import com.application.Mindart.entity.Artist;
-import com.application.Mindart.repository.ArtistRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.application.mindart.domain.entity.Artist;
+import com.application.mindart.domain.repository.ArtistRepository;
 
 @Service
 public class ArtistService  {
@@ -22,11 +23,11 @@ public class ArtistService  {
         return repository.findAll();
     }
 
-    public Artist getArtistById(String id){
+    public Artist getArtistById(Integer id){
         return repository.findById(id).orElse(null);
     }
 
-    public String deleteArtist(String id){
+    public String deleteArtist(Integer id){
         repository.deleteById(id);
         return "removed artist with id "+id;
     }

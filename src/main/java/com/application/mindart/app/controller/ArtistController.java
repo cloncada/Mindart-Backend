@@ -1,11 +1,19 @@
-package com.application.Mindart.controller;
-
-import com.application.Mindart.entity.Artist;
-import com.application.Mindart.service.ArtistService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+package com.application.mindart.app.controller;
 
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.application.mindart.domain.entity.Artist;
+import com.application.mindart.domain.service.ArtistService;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class ArtistController {
@@ -23,7 +31,7 @@ public class ArtistController {
     }
 
     @GetMapping("/Artist/{id}")
-    public Artist findArtistById(@PathVariable String id){
+    public Artist findArtistById(@PathVariable Integer id){
         return service.getArtistById(id);
     }
 
@@ -33,7 +41,7 @@ public class ArtistController {
     }
 
     @DeleteMapping("/delete/Artist/{id}")
-    public String deleteArtist(@PathVariable  String id){
+    public String deleteArtist(@PathVariable  Integer id){
        return service.deleteArtist(id);
     }
 

@@ -1,41 +1,47 @@
-package com.application.Mindart.entity;
+package com.application.mindart.domain.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "admin", uniqueConstraints={
+@Table(name = "artists", uniqueConstraints={
         @UniqueConstraint(  columnNames ={"email"})
 })
-public class Admin {
+
+public class Artist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer id;
-
     @Column
-    @NotBlank(message = "password mandatory")
+    @NotBlank(message = "name mandatory")
     private String name;
 
     @Column
-    @NotBlank(message = "password mandatory")
+    @NotBlank(message = "dob mandatory")
     private String dob;
 
-    @Column
+    @Column(nullable = false)
     @NotBlank(message = "password mandatory")
     private String password;
 
     @Column
     private String number;
-    @Column
+    @Column(unique = true)
     @NotBlank(message = "Email is mandatory")
     private String email;
 
@@ -86,5 +92,4 @@ public class Admin {
     public void setEmail(String email) {
         this.email = email;
     }
-
 }
