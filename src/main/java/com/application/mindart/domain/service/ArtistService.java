@@ -3,6 +3,7 @@ package com.application.mindart.domain.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.application.mindart.domain.entity.Artist;
@@ -10,6 +11,7 @@ import com.application.mindart.domain.repository.ArtistRepository;
 
 @Service
 public class ArtistService  {
+    
     @Autowired
     private ArtistRepository repository;
 
@@ -36,5 +38,9 @@ public class ArtistService  {
 
     public Artist searchEmailAndPassword(String email, String password){
         return repository.findByEmailAndPassword(email,password);
+    }
+    public Artist findByEmail(String email){
+
+        return repository.findByEmail(email);
     }
 }
